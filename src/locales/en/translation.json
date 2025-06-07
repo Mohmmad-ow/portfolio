@@ -1,5 +1,15 @@
 {
-  "welcome": "مرحبا",
-  "toggle_theme": "تبديل السمة",
-  "toggle_language": "تبديل اللغة"
+  "welcome": "Welcome",
+  "toggle_theme": "toggle theme",
+  "toggle_language": "toggle language",
+  "home": "home",
+  "about": "about",
+  "contact": "contact",
+  "experience": "experience",
+  "projects": "projects",
+  "short_description": "I Love to Develop ",
+  "long_description": "Full-stack developer crafting innovative web and mobile solutions. Passionate about building user-centric software that solves real problems and makes a meaningful impact",
+  "contact_me": "Contact me",
+  "download_resume": "Download CV"
+
 }

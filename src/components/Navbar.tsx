@@ -15,11 +15,7 @@ export default function Navbar() {
 
     const navLinks = (
         <>
-            {/* <AnimatePresence mode="wait" initial={false}>
-                <motion.li initial={{ opacity: 0, y: 0, scale: 0.50 }}
-                    animate={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.2, ease: "easeInOut" } }}
-                    exit={{ opacity: 0, y: 0, scale: 0.50 }}
-                    > */}
+          
 
             <li className={clsx(theme === "dark" ? "text-white hover:text-gray-400" : "text-[#161513] hover:text-gray-700")}>
                 <a href="#home">{t('home')}</a>
@@ -33,8 +29,7 @@ export default function Navbar() {
             <li className={clsx(theme === "dark" ? "text-white hover:text-gray-400" : "text-[#161513] hover:text-gray-700")}>
                 <a href="#contact">{t('contact')}</a>
             </li>
-            {/* </motion.li>
-            </AnimatePresence> */}
+          
         </>
     );
 
