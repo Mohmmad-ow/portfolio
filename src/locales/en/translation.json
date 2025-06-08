@@ -6,7 +6,7 @@
   "about": "about",
   "contact": "contact",
   "experience": "experience",
-  "projects": "projects",
+  "projects": "Projects",
   "short_description": "I Love to Develop ",
   "long_description": "Full-stack developer crafting innovative web and mobile solutions. Passionate about building user-centric software that solves real problems and makes a meaningful impact",
   "contact_me": "Contact me",
@@ -23,5 +23,27 @@
   "project_3_title": "Babilog - A University Blogging Platform",
   "project_3_description": "A blogging platform for university students with extremely customizable and user-friendly features.",
   "project_3_link": "https://babilog.fly.dev",
-  "project_3_technologies": "Technologies used: React, Node.js, Express, mySQL, Tailwind CSS, sequelize, fireBase, JWT, bcrypt"
+  "project_3_technologies": "Technologies used: React, Node.js, Express, mySQL, Tailwind CSS, sequelize, fireBase, JWT, bcrypt",
+  "experience_1_title": "Lead Software Engineer at Google",
+  "experience_1_description": "As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.",
+  "experience_1_date": "Nov 2024 - Present",
+
+  "experience_2_title": "Backend developer at Github",
+  "experience_2_description": "As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.",
+  "experience_2_date": "Oct 2019 - Jun 2023",
+
+
+  "testimonials": "Testimonials",
+  "testimonial_1_name": "Alice Johnson",
+  "testimonial_1_role": "Product Manager at TechCorp",
+  "testimonial_1_description": "Working with you was a fantastic experience. Your attention to detail and commitment to delivering high-quality solutions exceeded our expectations.",
+  
+
+  "testimonial_2_name": "Brian Lee",
+  "testimonial_2_role": "CTO at InnovateX",
+  "testimonial_2_description": "Your technical expertise and problem-solving skills were instrumental in the success of our project. Highly recommended!",
+
+  "testimonial_3_name": "Sara Kim",
+  "testimonial_3_role": "Lead Designer at Creativa",
+  "testimonial_3_description": "You brought our vision to life with your innovative ideas and seamless execution. It was a pleasure collaborating with you."
 }

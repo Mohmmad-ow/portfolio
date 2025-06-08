@@ -23,6 +23,30 @@
   "project_3_title": "Babilog - A University Blogging Platform",
   "project_3_description": "منصة تدوين للطلاب الجامعيين تتميز بخصائص قابلة للتخصيص وسهلة الاستخدام.",
   "project_3_link": "https://babilog.fly.dev",
-  "project_3_technologies": "التقنيات المستخدمة: React و Node.js و Express و mySQL و Tailwind CSS و sequelize و fireBase و JWT و bcrypt"
+  "project_3_technologies": "التقنيات المستخدمة: React و Node.js و Express و mySQL و Tailwind CSS و sequelize و fireBase و JWT و bcrypt",
+
+  "experience_1_title": "مهندس برمجيات أول في جوجل",
+  "experience_1_description": "بصفتي مهندس برمجيات أول في جوجل، لعبت دورًا محوريًا في تطوير حلول مبتكرة لخوارزميات البحث الأساسية في جوجل. من خلال التعاون مع فريق ديناميكي من المهندسين، ساهمت في تحسين دقة وكفاءة البحث، مما أدى إلى تحسين تجارب المستخدمين لملايين الأشخاص حول العالم.",
+  "experience_1_date": "نوفمبر 2024 - الآن",
+  "experience_2_title": "مطور برمجيات Backend في Github",
+  "experience_2_description": "بصفتي مطور برمجيات Backend في Github شاركت في تطوير حلول مبتكرة لتعزيز أمان وخصوصية المستخدمين. عملت مع فريق متعدد التخصصات لتحسين أداء الخدمات وتقديم ميزات جديدة تلبي احتياجات المستخدمين.",
+  "experience_2_date": "أكتوبر 2019 - يونيو 2023",
+
+  "testimonials": "شهادات العملاء",
+  "testimonial_1_name": "أليس جونسون",
+  "testimonial_1_role": "مديرة منتج في TechCorp",
+  "testimonial_1_description": "كان العمل معك تجربة رائعة. اهتمامك بالتفاصيل والتزامك بتقديم حلول عالية الجودة تجاوز توقعاتنا.",
+
+  "testimonial_2_name": "براين لي",
+  "testimonial_2_role": "المدير التقني في InnovateX",
+  "testimonial_2_description": "خبرتك التقنية ومهاراتك في حل المشكلات كانت أساسية في نجاح مشروعنا. أوصي بك بشدة!",
+
+  "testimonial_3_name": "سارة كيم",
+  "testimonial_3_role": "مصممة رئيسية في Creativa",
+  "testimonial_3_description": "لقد حولت رؤيتنا إلى واقع بأفكارك المبتكرة وتنفيذك السلس. كان من دواعي سروري التعاون معك."
+ 
 
 }
+
+
+

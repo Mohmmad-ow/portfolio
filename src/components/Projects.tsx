@@ -7,8 +7,8 @@ import attendanceImage from "../assets/projects-images/attendance.jpg";
 import CarouselViewer from "./Carousel";
 
 export default function Projects() {
-    const {t} = useTranslation();
-    const {theme} = useAppContext();
+    const { t } = useTranslation();
+    const { theme } = useAppContext();
     const projects = [
         {
             title: t("project_1_title"),
@@ -37,6 +37,9 @@ export default function Projects() {
             theme === "dark" ? "bg-[#161513] text-white" : "bg-white text-[#161513]",
             "p-16 sm:pl-40 sm:pr-40 shadow-lg"
         )}>
+            <h2 className="text-3xl pb-2 text-center mt-6 mb-9 font-bold text-transparent bg-clip-text bg-gradient-to-b from-orange-200 to-orange-600">
+                {t("projects")}
+            </h2>
             <CarouselViewer projects={projects} theme={theme} key={projects.length} />
         </section>
     );
