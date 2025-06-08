@@ -15,8 +15,6 @@ export default function Navbar() {
 
     const navLinks = (
         <>
-          
-
             <li className={clsx(theme === "dark" ? "text-white hover:text-gray-400" : "text-[#161513] hover:text-gray-700")}>
                 <a href="#home">{t('home')}</a>
             </li>

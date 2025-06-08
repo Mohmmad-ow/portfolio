@@ -10,5 +10,19 @@
   "short_description": "أحب تطوير ",
   "long_description": "مطور شامل يقوم بإنشاء حلول مبتكرة على الويب والهاتف المحمول. شغوف ببناء برامج تركز على المستخدم تحل المشكلات الحقيقية وتحدث تأثيرًا ذا مغزى.",
   "contact_me": "اتصل بي",
-  "download_resume": "تحميل السيرة الذاتية"
+  "download_resume": "تحميل السيرة الذاتية",
+  "Experience_With": "خبرة باستخدام",
+  "project_1_title": "نظام إدارة المطاعم",
+  "project_1_description": "نظام شامل لإدارة عمليات المطاعم، بما في ذلك معالجة الطلبات وإدارة المخزون وإدارة علاقات العملاء.",
+  "project_1_link": "https://resturant-prj.fly.dev",
+  "project_1_technologies": "التقنيات المستخدمة: ejs و Node.js و Express و MongoDB و User Session و Tailwind CSS",
+  "project_2_title": "نظام تسجيل الحضور المدعوم بالذكاء الاصطناعي",
+  "project_2_description": "تطبيق سطح مكتب مدعوم بالذكاء الاصطناعي يقوم بأتمتة عملية تسجيل الحضور باستخدام رؤية الكمبيوتر، مما يقلل من الجهد اليدوي ويحسن الدقة.",
+  "project_2_link": "https://attendance-system-ai.fly.dev",
+  "project_2_technologies": "التقنيات المستخدمة: React و Python و FastAPI و SQLite و Tailwind CSS و OpenCV و deepFace و Material UI و Electron.js",
+  "project_3_title": "Babilog - A University Blogging Platform",
+  "project_3_description": "منصة تدوين للطلاب الجامعيين تتميز بخصائص قابلة للتخصيص وسهلة الاستخدام.",
+  "project_3_link": "https://babilog.fly.dev",
+  "project_3_technologies": "التقنيات المستخدمة: React و Node.js و Express و mySQL و Tailwind CSS و sequelize و fireBase و JWT و bcrypt"
+
 }

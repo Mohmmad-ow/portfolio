@@ -10,6 +10,18 @@
   "short_description": "I Love to Develop ",
   "long_description": "Full-stack developer crafting innovative web and mobile solutions. Passionate about building user-centric software that solves real problems and makes a meaningful impact",
   "contact_me": "Contact me",
-  "download_resume": "Download CV"
-
+  "download_resume": "Download CV",
+  "Experience_With": "Experience with",
+  "project_1_title": "Restaurant Management System",
+  "project_1_description": "A comprehensive system for managing restaurant operations, including order processing, inventory management, and customer relationship management.",
+  "project_1_link": "https://resturant-prj.fly.dev",
+  "project_1_technologies": "Technologies used: ejs, Node.js, Express, MongoDB, User Session,Tailwind CSS",
+  "project_2_title": "Attendance Taking System powered by AI",
+  "project_2_description": "An AI-powered desktop application that automates the process of taking attendance using computer vision, reducing manual effort and improving accuracy.",
+  "project_2_link": "https://attendance-system-ai.fly.dev",
+  "project_2_technologies": "Technologies used: React, python, FastAPI, SQLite, Tailwind CSS, OpenCV, deepFace, material UI, electron.js",
+  "project_3_title": "Babilog - A University Blogging Platform",
+  "project_3_description": "A blogging platform for university students with extremely customizable and user-friendly features.",
+  "project_3_link": "https://babilog.fly.dev",
+  "project_3_technologies": "Technologies used: React, Node.js, Express, mySQL, Tailwind CSS, sequelize, fireBase, JWT, bcrypt"
 }
