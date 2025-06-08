@@ -5,8 +5,8 @@ export default function ProjectCard({ title, description, link, technologies, im
     const { theme } = useAppContext();
     return (
         <div className={clsx(
-            "shadow-lg rounded-lg mb-6 max-w-[436px]",
-            theme === "dark" ? "bg-[#161513] text-white" : "bg-white text-[#161513]",
+            "shadow-lg rounded-lg mb-6 max-w-96",
+            theme === "dark" ? "bg-gray-800 text-white" : "bg-white text-[#161513]",
             "flex flex-col items-start justify-between transition-all duration-300 hover:shadow-xl hover:scale-105"
         )}>
             {/* Image Container with Hover Effect */}
@@ -28,7 +28,7 @@ export default function ProjectCard({ title, description, link, technologies, im
                 )}>
                     <h4 className={clsx(
                         "font-semibold mb-2 lg:text-lg text-sm ",
-                        theme === "dark" ? "text-white" : "text-[#161513]"
+                        "text-white"
                     )}>Technologies Used:</h4>
                     <p className={clsx(
                         "text-sm lg:text-xs",
@@ -38,9 +38,9 @@ export default function ProjectCard({ title, description, link, technologies, im
             </div>
 
             {/* Rest of your card content */}
-            <h3 className="text-xl font-bold pl-3 pr-3 mb-2">{title}</h3>
+            <h3 className="text-lg font-bold pl-3 pr-3 mb-1">{title}</h3>
             <p className={clsx(
-                "text-gray-700 mb-4 pl-3 pr-3",
+                "text-gray-700 mb-2 text-sm pl-3 pr-3",
                 theme === "dark" ? "dark:text-gray-300" : "text-gray-600"
             )}>{description}</p>
 
@@ -49,7 +49,7 @@ export default function ProjectCard({ title, description, link, technologies, im
                 target="_blank"
                 rel="noopener noreferrer"
                 className={clsx(
-                    "text-blue-500 hover:text-blue-700 pl-3 pb-6 pr-3",
+                    "text-blue-500 hover:text-blue-700 pl-3 pb-3 pr-3",
                     theme === "dark" ? "dark:text-blue-400" : "text-blue-600"
                 )}
             >

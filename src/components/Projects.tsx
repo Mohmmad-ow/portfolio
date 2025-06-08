@@ -1,8 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useAppContext } from "../context/useAppContext";
 import clsx from "clsx";
-// import CarouselViewer from "./Carousel";
-import ProjectCard from "./ProjectCard";
 import restaurantImage from "../assets/projects-images/restaurant.jpg";
 import blogImage from "../assets/projects-images/blog.jpg";
 import attendanceImage from "../assets/projects-images/attendance.jpg";
@@ -39,10 +37,7 @@ export default function Projects() {
             theme === "dark" ? "bg-[#161513] text-white" : "bg-white text-[#161513]",
             "p-16 sm:pl-40 sm:pr-40 shadow-lg"
         )}>
-            {/* {projects.map((project, index) => (
-                <ProjectCard key={index} image={project.image} title={project.title} i18nIsDynamicList description={project.description} link={project.link} technologies={project.technologies} />
-            ))} */}
-            <CarouselViewer projects={projects} i18nIsDynamicList key={projects.length} />
+            <CarouselViewer projects={projects} theme={theme} key={projects.length} />
         </section>
     );
 }

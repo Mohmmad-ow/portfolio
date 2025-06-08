@@ -1,58 +1,163 @@
 import { useState } from "react";
-import type { Project } from "../utility/types";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import clsx from "clsx";
-import { useTranslation } from "react-i18next";
-import { useAppContext } from "../context/useAppContext";
-import ProjectCard from "./ProjectCard";
-import useWindowDimensions from "../utility/WindowSizes";
-export default function CarouselViewer({ projects }: { projects: Project[] }) {
-    const { t } = useTranslation();
-    const { theme } = useAppContext();
-    const { width } = useWindowDimensions()
-    const [currentIndex, setCurrentIndex] = useState<number>(0);
-    const nextProject = () => {
-        setCurrentIndex((prevIndex: number) => (prevIndex + 1) % projects.length);
-    };
-    const prevProject = () => {
-        setCurrentIndex((prevIndex: number) => (prevIndex - 1 + projects.length) % projects.length);
-    };
+import ProjectCard from "./ProjectCard"; // Adjust path based on your project
+import type { Project, Theme } from "../utility/types";
+
+const ProjectCarousel = ({ projects, theme }: { projects: Project[], theme: Theme }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [direction, setDirection] = useState(0);
 
     const prevIndex = (currentIndex - 1 + projects.length) % projects.length;
     const nextIndex = (currentIndex + 1) % projects.length;
-    const currentProject = projects[currentIndex];
-    if (width < 768) {
-        return (
-            <div className="carousel">
-                <div className="carousel-item ">
-                    <h3>{currentProject.title}</h3>
-                    <p>{currentProject.description}</p>
-                    <a href={currentProject.link}>View Project</a>
-                    <p>Technologies: {currentProject.technologies}</p>
-                </div>
-            </div>
-        )
-    }
+
+    const goToNext = () => {
+        setDirection(1);
+        setCurrentIndex((prev) => (prev + 1) % projects.length);
+    };
+
+    const goToPrev = () => {
+        setDirection(-1);
+        setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
+    };
+
     return (
-        <div className={clsx(
-            theme === "dark" ? "bg-[#161513] text-white" : "bg-white text-[#161513]"
-            // "shadow-lg"
-        )}>
-            <div className="flex items-center justify-center pl-12 pr-12">
-                <div className={clsx(
-                    "flex justify-center items-center opacity-75 scale-50"
-                )}>
-                    <ProjectCard description={projects[prevIndex].description} image={projects[prevIndex].image} link={projects[prevIndex].link} technologies={projects[prevIndex].technologies} title={projects[prevIndex].title} i18nIsDynamicList />
-                </div>
-                <ProjectCard description={projects[currentIndex].description} image={projects[currentIndex].image} link={projects[currentIndex].link} technologies={projects[currentIndex].technologies} title={projects[currentIndex].title} i18nIsDynamicList />
-                <div className={clsx(
-                    "flex justify-center items-center opacity-75 scale-50"
-                )}>
-                    <ProjectCard description={projects[nextIndex].description} image={projects[nextIndex].image} link={projects[nextIndex].link} technologies={projects[nextIndex].technologies} title={projects[nextIndex].title} i18nIsDynamicList />
-                </div>
+        <div
+            className={clsx(
+                theme === "dark"
+                    ? "bg-[#161513] text-white"
+                    : "bg-white text-[#161513]"
+            )}
+        >
+            <div className="flex items-center justify-center px-24 relative  overflow-hidden">
+                {/* Previous project */}
+                <motion.div
+                    key={`prev-${prevIndex}-${currentIndex}`}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 0.4, scale: 0.9 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    transition={{ duration: 0.4 }}
+                    className="absolute left-0 blur-xs, mt-12"
+                >
+                    <ProjectCard {...projects[prevIndex]} />
+                </motion.div>
+
+                {/* Current project */}
+                <AnimatePresence mode="wait" custom={direction}>
+                    <motion.div
+                        key={currentIndex}
+                        custom={direction}
+                        variants={{
+                            enter: (dir: number) => ({
+                                x: dir > 0 ? "100%" : "-100%",
+                                opacity: 0,
+                                scale: 0.9,
+                            }),
+                            center: {
+                                x: "0%",
+                                opacity: 1,
+                                scale: 1,
+                            },
+                            exit: (dir: number) => ({
+                                x: dir < 0 ? "100%" : "-100%",
+                                opacity: 0,
+                                scale: 0.9,
+                            }),
+                        }}
+                        initial="enter"
+                        animate="center"
+                        exit="exit"
+                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                        className="z-10"
+                    >
+                        <ProjectCard {...projects[currentIndex]} />
+                    </motion.div>
+                </AnimatePresence>
+
+                {/* Next project */}
+                <motion.div
+                    key={`next-${nextIndex}-${currentIndex}`}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 0.4, scale: 0.9 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute right-0 blur-xs, mt-12"
+                >
+                    <ProjectCard {...projects[nextIndex]} />
+                </motion.div>
+            </div>
+            <div className="flex justify-center gap-2 my-12">
+                <AnimatePresence mode="wait">
+                    {projects.map((_, indx) => {
+                        const isActive = currentIndex === indx;
+                        return (
+                            <motion.button
+                                key={`position-${indx}`}
+                                initial={{ scale: 0.8, opacity: 0.5 }}
+                                animate={{
+                                    opacity: 1,
+                                    scale: isActive ? 1.2 : 1,
+                                    rotate: 0,
+                                }}
+                                exit={{ scale: 0.2, rotate: 90, opacity: 0.7 }}
+                                transition={{ duration: 0.2, ease: "easeInOut" }}
+                                onClick={() => {
+                                    if (!isActive) {
+                                        setDirection(indx > currentIndex ? 1 : -1);
+                                        setCurrentIndex(indx);
+                                    }
+                                }}
+                                className={clsx(
+                                    isActive
+                                        ? theme === "dark"
+                                            ? "bg-white"
+                                            : "bg-black"
+                                        : theme === "dark"
+                                            ? "bg-gray-600"
+                                            : "bg-gray-300",
+                                    "h-1 rounded-4xl",
+                                    isActive ? "w-8" : "w-4"
+                                )}
+                            />
+                        );
+                    })}
+                </AnimatePresence>
             </div>
 
+            {/* Controls */}
+            <div className="flex justify-between rtl:flex-row-reverse items-center mt-8 px-12">
+                <motion.button
+                    onClick={goToPrev}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className={clsx(
+                        "pl-3 pr-3 p-2 rounded-full cursor-pointer",
+                        theme === "dark"
+                            ? "border border-white hover:border-none hover:bg-white hover:text-black"
+                            : "border border-black hover:border-none hover:bg-black hover:text-white"
+                    )}
+                >
+                    <FontAwesomeIcon icon={faArrowLeft} />
+                </motion.button>
 
-        </div >
-    )
-}
+                <motion.button
+                    onClick={goToNext}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className={clsx(
+                        "pl-3 pr-3 p-2 rounded-full cursor-pointer",
+                        theme === "dark"
+                            ? "border border-white hover:border-none hover:bg-white hover:text-black"
+                            : "border border-black hover:border-none hover:bg-black hover:text-white"
+                    )}
+                >
+                    <FontAwesomeIcon icon={faArrowRight} />
+                </motion.button>
+            </div>
+        </div>
+    );
+};
+
+export default ProjectCarousel;
