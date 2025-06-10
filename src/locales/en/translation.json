@@ -2,16 +2,18 @@
   "welcome": "Welcome",
   "toggle_theme": "toggle theme",
   "toggle_language": "toggle language",
-  "home": "home",
+  "home": "Home",
   "about": "about",
-  "contact": "contact",
-  "experience": "experience",
+  "contact": "Contact",
+  "experience": "Experience",
   "projects": "Projects",
   "short_description": "I Love to Develop ",
   "long_description": "Full-stack developer crafting innovative web and mobile solutions. Passionate about building user-centric software that solves real problems and makes a meaningful impact",
   "contact_me": "Contact me",
   "download_resume": "Download CV",
+  "view-skills": "View All In Detail",
   "Experience_With": "Experience with",
+  "technicalSkills": "Skills",
   "project_1_title": "Restaurant Management System",
   "project_1_description": "A comprehensive system for managing restaurant operations, including order processing, inventory management, and customer relationship management.",
   "project_1_link": "https://resturant-prj.fly.dev",
@@ -45,5 +47,12 @@
 
   "testimonial_3_name": "Sara Kim",
   "testimonial_3_role": "Lead Designer at Creativa",
-  "testimonial_3_description": "You brought our vision to life with your innovative ideas and seamless execution. It was a pleasure collaborating with you."
+  "testimonial_3_description": "You brought our vision to life with your innovative ideas and seamless execution. It was a pleasure collaborating with you.",
+
+  "Contact": "Contact",
+  "contact_message": "Feel free to reach out to me for any project or collaboration related to my expertise.",
+  "Email-Address": "mohammadbaqiro31@gmail.com",
+  "Email": "Email",
+  "Phone": "Phone",
+  "Phone_number": "+9647765865436 | +9647822047103"
 }

@@ -26,7 +26,7 @@ export default function Experience() {
     ]
 
     return (
-        <div className={clsx(
+        <div id="experience" className={clsx(
             theme === "dark" ? "bg-[#161513]  text-white" : "bg-white text-[#161513]",
             "p-16 sm:pl-40 w-full sm:pr-40 shadow-lg"
         )}>

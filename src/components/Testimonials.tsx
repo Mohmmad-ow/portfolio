@@ -36,7 +36,7 @@ export default function Testimonials() {
     return (
         <section className={clsx(
             theme === "dark" ? "bg-[#161513] text-white" : "bg-white text-[#161513]",
-            "py-16 shadow-lg"
+            "py-16"
         )}>
             <h2 className="text-3xl pb-2 text-center mt-6 mb-9 font-bold text-transparent bg-clip-text bg-gradient-to-b from-green-200 to-green-600">
                 {t("testimonials")}

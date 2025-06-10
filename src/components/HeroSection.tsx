@@ -9,7 +9,7 @@ export default function HeroSection() {
 
     return (
         <section className={clsx(
-            "p-16 sm:pl-40 sm:pr-40 shadow-lg",
+            "p-16 sm:pl-40 sm:pr-40",
             theme === "dark" ? "bg-[#161513]" : "bg-white",
             "flex flex-col items-center justify-center",
         )}>

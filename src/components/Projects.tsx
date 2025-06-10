@@ -33,9 +33,9 @@ export default function Projects() {
         }
     ];
     return (
-        <section className={clsx(
+        <section id="projects" className={clsx(
             theme === "dark" ? "bg-[#161513] text-white" : "bg-white text-[#161513]",
-            "p-16 sm:pl-40 sm:pr-40 shadow-lg"
+            "p-16 sm:pl-40 sm:pr-40"
         )}>
             <h2 className="text-3xl pb-2 text-center mt-6 mb-9 font-bold text-transparent bg-clip-text bg-gradient-to-b from-orange-200 to-orange-600">
                 {t("projects")}

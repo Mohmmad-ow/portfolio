@@ -1,4 +1,3 @@
-import React from "react";
 import { useAppContext } from "../context/useAppContext";
 import type { Experience } from "../utility/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

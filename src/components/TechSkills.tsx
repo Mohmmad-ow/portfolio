@@ -2,15 +2,16 @@ import { useTranslation } from "react-i18next";
 import { useAppContext } from "../context/useAppContext";
 import { SVGs } from "../assets/SVGs/SVG";
 import clsx from "clsx";
+import TechSkillModal from "./TechSkillsModal";
 export default function TechnicalSkills() {
     const { t } = useTranslation();
     const { theme } = useAppContext();
     const skills = SVGs(theme)
     console.log(skills);
     return (
-        <section className={clsx(
+        <section id="technicalSkills" className={clsx(
             theme === "dark" ? "bg-[#161513] text-white" : "bg-white text-[#161513]",
-            "pl-[15%] pr-[15%] md:pl-[30%] md:pr-[30%] sm:pl-[25%] sm:pr-[25%] pt-8 pb-8"
+            "pl-[15%] flex flex-col justify-center gap-4 pr-[15%] md:pl-[30%] md:pr-[30%] sm:pl-[25%] sm:pr-[25%] pt-8 pb-8"
         )}>
             <h4 className={clsx(
                 theme === "dark" ? "text-white" : "text-[#161513]",
@@ -48,6 +49,7 @@ export default function TechnicalSkills() {
                     {skills.ElectronJs}
                 </li>
             </ul>
+            <TechSkillModal />
         </section>
     );
 }

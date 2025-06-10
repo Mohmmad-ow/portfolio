@@ -4,12 +4,12 @@ import darkLogo from '../assets/nav/logo-dark.png';
 import lightLogo from '../assets/nav/logo-light.png';
 import clsx from "clsx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark, faSun, faMoon, faLanguage } from '@fortawesome/free-solid-svg-icons';
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function Navbar() {
-    const { language, theme } = useAppContext();
+    const { language, theme, toggleLanguage, toggleTheme } = useAppContext();
     const { t } = useTranslation();
     const [triggerMenu, setTriggerMenu] = useState(false);
 
@@ -17,6 +17,9 @@ export default function Navbar() {
         <>
             <li className={clsx(theme === "dark" ? "text-white hover:text-gray-400" : "text-[#161513] hover:text-gray-700")}>
                 <a href="#home">{t('home')}</a>
+            </li>
+            <li className={clsx(theme === "dark" ? "text-white hover:text-gray-400" : "text-[#161513] hover:text-gray-700")}>
+                <a href="#technicalSkills">{t('technicalSkills')}</a>
             </li>
             <li className={clsx(theme === "dark" ? "text-white hover:text-gray-400" : "text-[#161513] hover:text-gray-700")}>
                 <a href="#projects">{t('projects')}</a>
@@ -27,7 +30,33 @@ export default function Navbar() {
             <li className={clsx(theme === "dark" ? "text-white hover:text-gray-400" : "text-[#161513] hover:text-gray-700")}>
                 <a href="#contact">{t('contact')}</a>
             </li>
-          
+            {/* Language Toggle */}
+            <li>
+                <button
+                    onClick={toggleLanguage}
+                    className={clsx(
+                        "transition-colors duration-200 cursor-pointer",
+                        theme === "dark" ? "text-white hover:text-gray-400" : "text-[#161513] hover:text-gray-700"
+                    )}
+                    aria-label="Toggle Language"
+                >
+                    <FontAwesomeIcon icon={faLanguage} /> {/* fallback, see below */}
+                    {language === 'ar' ? 'EN' : 'AR'}
+                </button>
+            </li>
+            {/* Theme Toggle */}
+            <li>
+                <button
+                    onClick={toggleTheme}
+                    className={clsx(
+                        "transition-colors duration-200 cursor-pointer",
+                        theme === "dark" ? "text-white hover:text-gray-400" : "text-[#161513] hover:text-gray-700"
+                    )}
+                    aria-label="Toggle Theme"
+                >
+                    <FontAwesomeIcon icon={theme === "dark" ? faMoon : faSun} />
+                </button>
+            </li>
         </>
     );
 
@@ -36,9 +65,9 @@ export default function Navbar() {
             theme === "dark" ? "dark:bg-[#222222]" : "bg-[#E6E6E6]",
             "px-[8%] flex items-center justify-between h-[16%] py-4 relative"
         )}>
-            <div className="text-2xl font-bold">
+            <a className="text-2xl font-bold hover:opacity-60" href="/">
                 <img className="w-16 h-10" src={theme === 'dark' ? darkLogo : lightLogo} alt="App Logo" />
-            </div>
+            </a>
 
             {/* Desktop Navigation */}
             <ul className={clsx("hidden sm:flex gap-6", language === 'ar' ? 'rtl' : 'ltr')}>
