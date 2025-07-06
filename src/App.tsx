@@ -2,8 +2,6 @@ import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import TechnicalSkills from './components/TechSkills'
 import Projects from './components/Projects'
-import Experience from './components/experience'
-import Testimonials from './components/Testimonials'
 import Footer from './components/Footer'
 
 import { useAppContext } from './context/useAppContext'
@@ -21,8 +19,7 @@ function App() {
       <HeroSection />
       <TechnicalSkills />
       <Projects />
-      {/* <Experience />
-      <Testimonials /> */}
+      
       <Footer />
     </div>
   )
