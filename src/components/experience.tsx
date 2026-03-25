@@ -2,8 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useAppContext } from "../context/useAppContext";
 import clsx from "clsx";
 import type { Experience } from "../utility/types"
-import { faGoogle } from "@fortawesome/free-brands-svg-icons"
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faCreativeCommonsSampling } from "@fortawesome/free-brands-svg-icons"
 import ExperienceCard from "./experienceCard";
 
 
@@ -15,13 +14,7 @@ export default function Experience() {
             date: t("experience_1_date"),
             description: t("experience_1_description"),
             title: t("experience_1_title"),
-            icon: faGoogle
-        },
-        {
-            date: t("experience_2_date"),
-            description: t("experience_2_description"),
-            title: t("experience_2_title"),
-            icon: faGithub
+            icon: faCreativeCommonsSampling
         }
     ]
 

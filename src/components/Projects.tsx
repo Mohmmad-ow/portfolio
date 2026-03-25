@@ -4,7 +4,10 @@ import clsx from "clsx";
 import restaurantImage from "../assets/projects-images/restaurant.jpg";
 import blogImage from "../assets/projects-images/blog.jpg";
 import attendanceImage from "../assets/projects-images/attendance.jpg";
+import SwiftScoutImage from "../assets/projects-images/SwiftScout.jpg";
+import HRImage from "../assets/projects-images/HR.jpg";
 import CarouselViewer from "./Carousel";
+
 
 export default function Projects() {
     const { t } = useTranslation();
@@ -30,6 +33,20 @@ export default function Projects() {
             link: t("project_3_link"),
             technologies: t("project_3_technologies"),
             image: attendanceImage // Use the imported image directly
+        },
+        {
+            title: t("project_4_title"),
+            description: t("project_4_description"),
+            link: t("project_4_link"),
+            technologies: t("project_4_technologies"),
+            image: SwiftScoutImage// Placeholder image
+        },
+        {
+            title: t("project_5_title"),
+            description: t("project_5_description"),
+            link: t("project_5_link"),
+            technologies: t("project_5_technologies"),
+            image: HRImage // Placeholder image
         }
     ];
     return (

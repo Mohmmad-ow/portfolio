@@ -3,7 +3,12 @@ import { useAppContext } from "../context/useAppContext"
 import { useTranslation } from 'react-i18next'
 import Avatar from "./Avatar";
 import AdjacentButton from "./adjesentButton";
-export default function HeroSection() {
+
+interface HeroSectionProps {
+  onContactClick: () => void;
+}
+
+export default function HeroSection({ onContactClick }: HeroSectionProps) {
     const { t } = useTranslation();
     const { theme, language } = useAppContext();
 
@@ -42,7 +47,7 @@ export default function HeroSection() {
                 )}>{t("long_description")}</p>
 
                 <div className="h-4" />
-                <AdjacentButton />
+                <AdjacentButton onContactClick={onContactClick} />
             </div>
         </section>
     )

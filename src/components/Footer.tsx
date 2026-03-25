@@ -1,7 +1,7 @@
 import { useAppContext } from "../context/useAppContext";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
-import { faInstagram, faXTwitter, faTelegram } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faXTwitter, faTelegram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Footer() {
     const { theme } = useAppContext();
@@ -52,7 +52,7 @@ export default function Footer() {
                 </div>
                 <div className={clsx("flex gap-4 mt-2")}>
                     <a
-                        href="https://instagram.com/yourprofile"
+                        href="https://www.instagram.com/mohmmadbaqiro31/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram"
@@ -62,7 +62,7 @@ export default function Footer() {
 
                     </a>
                     <a
-                        href="https://twitter.com/yourprofile"
+                        href="https://x.com/baqir_mohm28874"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Twitter"
@@ -71,13 +71,22 @@ export default function Footer() {
                         <FontAwesomeIcon icon={faXTwitter} />
                     </a>
                     <a
-                        href="https://t.me/yourprofile"
+                        href="https://t.me/LaDarty19"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Telegram"
                         className={iconColor + " text-2xl hover:text-blue-500 transition"}
                     >
                         <FontAwesomeIcon icon={faTelegram} />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/mohmmad-baqir-al-jabur-94570b226/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Linkedin"
+                        className={iconColor + " text-2xl hover:text-blue-500 transition"}
+                    >
+                        <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                 </div>
             </div>
