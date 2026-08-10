@@ -48,7 +48,7 @@
   "project_4_technologies": "Golang, Ent ORM, MySql, Tailwind CSS, Material UI, React, Wails",
   "project_5_title": "SwiftScout - منصة توظيف تستخدم الذكاء الاصطناعي والتعلم الآلي",
   "project_5_description": "منصة ذكية للتوظيف تستخدم الذكاء الاصطناعي والتعلم الآلي لتحميل وتحليل السير الذاتية، وإجراء المقابلات وتقييم المرشحين، مما يوفر تجربة سلسة لكل من أصحاب العمل والباحثين عن عمل.",
-  "project_5_link": "https://github.com/Mohmmad-ow/smart-hiring-go",
+  "project_5_link": "https://github.com/Mohmmad-ow/SwiftScout",
   "project_5_technologies": "التقنيات المستخدمة: Golang,Ent ORM, Chi (HTTP router), Swagger/OpenAPI, Webhooks, Microservices, Python, FastAPI, Gemini, Whisper AI, Redis, MySql, JWT, bcrypt, Tailwind CSS, Material UI, React",
 
   "experience_1_title": "مهندس برمجيات أول في جوجل",

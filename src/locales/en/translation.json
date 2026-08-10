@@ -48,7 +48,7 @@
   "project_4_technologies": "Golang, Ent ORM, MySql, Tailwind CSS, Material UI, React, Wails",
   "project_5_title": "SwiftScout - Hiring Platform utilizing AI/ML",
   "project_5_description": "A Smart Platform for hiring that uses AI/ML to upload and analyze resumes, and interview and evaluate candidates, providing a seamless experience for both employers and job seekers.",
-  "project_5_link": "https://github.com/Mohmmad-ow/smart-hiring-go",
+  "project_5_link": "https://github.com/Mohmmad-ow/SwiftScout",
   "project_5_technologies": "Technologies used: Golang,Ent ORM, Chi (HTTP router), Swagger/OpenAPI, Webhooks, Microservices, Python, FastAPI, Gemini, Whisper AI, Redis, MySql, JWT, bcrypt, Tailwind CSS, Material UI, React",
 
   "experience_1_title": "Software Developer intern at IT department of the Administration of Samawah City",
