@@ -57,7 +57,7 @@ export default function TechSkillModal() {
             >
               {/* Header */}
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold">{t("techSkills")}</h2>
+                <h2 className="text-2xl font-bold">{t("technicalSkills")}</h2>
                 <button
                   onClick={closeModal}
                   className={clsx(

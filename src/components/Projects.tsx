@@ -25,28 +25,42 @@ export default function Projects() {
             description: t("project_2_description"),
             link: t("project_2_link"),
             technologies: t("project_2_technologies"),
-            image: blogImage // Use the imported image directly
+            image: attendanceImage
         },
         {
             title: t("project_3_title"),
             description: t("project_3_description"),
             link: t("project_3_link"),
             technologies: t("project_3_technologies"),
-            image: attendanceImage // Use the imported image directly
+            image: blogImage
         },
         {
             title: t("project_4_title"),
             description: t("project_4_description"),
             link: t("project_4_link"),
             technologies: t("project_4_technologies"),
-            image: SwiftScoutImage// Placeholder image
+            image: HRImage
         },
         {
             title: t("project_5_title"),
             description: t("project_5_description"),
             link: t("project_5_link"),
             technologies: t("project_5_technologies"),
+            image: SwiftScoutImage
+        },
+        {
+            title: t("project_6_title"),
+            description: t("project_6_description"),
+            link: t("project_6_link"),
+            technologies: t("project_6_technologies"),
             image: HRImage // Placeholder image
+        },
+        {
+            title: t("project_7_title"),
+            description: t("project_7_description"),
+            link: t("project_7_link"),
+            technologies: t("project_7_technologies"),
+            image: blogImage // Placeholder image
         }
     ];
     return (

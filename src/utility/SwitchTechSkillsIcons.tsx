@@ -1,5 +1,9 @@
 import { SVGs } from "../assets/SVGs/SVG";
 import type { Theme } from "./types";
+import {
+    SiPhp, SiLaravel, SiPython, SiFastapi, SiOpenjdk, SiPostgresql, SiRedis,
+    SiFlutter, SiDocker, SiGit, SiNginx, SiPostman, SiFlydotio,
+} from "react-icons/si";
 
 export default function TechSkillsIcons(theme: Theme) {
     const Icons = SVGs(theme)
@@ -23,8 +27,12 @@ export default function TechSkillsIcons(theme: Theme) {
             skills: [
                 { icon: Icons.NodeJs, label: "Node.js" },
                 { icon: Icons.Golang, label: "Go" },
+                { icon: <SiPhp />, label: "PHP" },
+                { icon: <SiLaravel />, label: "Laravel" },
+                { icon: <SiPython />, label: "Python" },
+                { icon: <SiFastapi />, label: "FastAPI" },
+                { icon: <SiOpenjdk />, label: "Java" },
                 { icon: Icons.ExpressJs, label: "Express.js" },
-                { icon: "NestJs", label: "NestJS" },
                 { icon: Icons.fireBase, label: "Firebase" },
             ],
         },
@@ -33,7 +41,8 @@ export default function TechSkillsIcons(theme: Theme) {
             label: "Database",
             skills: [
                 { icon: Icons.MongoDB, label: "MongoDB" },
-                // { icon: Ico, label: "PostgreSQL" },
+                { icon: <SiPostgresql />, label: "PostgreSQL" },
+                { icon: <SiRedis />, label: "Redis" },
                 { icon: Icons.mySQL, label: "MySQL" },
                 { icon: Icons.Sqlite, label: "SQLite" },
             ],
@@ -44,8 +53,7 @@ export default function TechSkillsIcons(theme: Theme) {
             skills: [
                 { icon: Icons.React, label: "React Native" },
                 { icon: Icons.Expo, label: "Expo" },
-                { icon: "TAMAGUI", label: "Tama GUI" },
-                
+                { icon: <SiFlutter />, label: "Flutter" },
             ],
         },
         {
@@ -53,6 +61,17 @@ export default function TechSkillsIcons(theme: Theme) {
             label: "Desktop Development",
             skills: [
                 { icon: Icons.ElectronJs, label: "Electron" },
+            ],
+        },
+        {
+            key: "devops",
+            label: "Tools & DevOps",
+            skills: [
+                { icon: <SiDocker />, label: "Docker" },
+                { icon: <SiGit />, label: "Git" },
+                { icon: <SiNginx />, label: "Nginx" },
+                { icon: <SiPostman />, label: "Postman" },
+                { icon: <SiFlydotio />, label: "Fly.io" },
             ],
         },
     ];

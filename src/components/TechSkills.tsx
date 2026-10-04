@@ -3,11 +3,12 @@ import { useAppContext } from "../context/useAppContext";
 import { SVGs } from "../assets/SVGs/SVG";
 import clsx from "clsx";
 import TechSkillModal from "./TechSkillsModal";
+import { SiLaravel, SiPostgresql, SiDocker } from "react-icons/si";
 export default function TechnicalSkills() {
     const { t } = useTranslation();
     const { theme } = useAppContext();
     const skills = SVGs(theme)
-    console.log(skills);
+    const iconColor = theme === "dark" ? "text-white" : "text-[#161513]";
     return (
         <section id="technicalSkills" className={clsx(
             theme === "dark" ? "bg-[#161513] text-white" : "bg-white text-[#161513]",
@@ -22,7 +23,7 @@ export default function TechnicalSkills() {
                     {skills.JS}
                 </li>
                 <li className="flex justify-center w-full">
-                    {skills.Next}
+                    <SiLaravel size={42} className={iconColor} />
                 </li>
                 <li className="flex justify-center w-full">
                     {skills.HTML5}
@@ -40,13 +41,13 @@ export default function TechnicalSkills() {
                     {skills.Golang}
                 </li>
                 <li className="flex justify-center w-full">
-                    {skills.Database}
+                    <SiPostgresql size={42} className={iconColor} />
                 </li>
                 <li className="flex justify-center w-full">
                     {skills.tailwindcss}
                 </li>
                 <li className="flex justify-center w-full">
-                    {skills.ElectronJs}
+                    <SiDocker size={42} className={iconColor} />
                 </li>
             </ul>
             <TechSkillModal />
